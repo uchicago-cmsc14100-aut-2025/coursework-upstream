@@ -75,16 +75,16 @@ def test_longer_string(u, v, expected):
 
 @pytest.mark.parametrize("a, b, c, t, expected",
                          [(0,0,0,0,0),
-                          (2,2,2,1,1),
-                          (3,3,3,1,8),
-                          (3,3,3,2,1),
-                          (2,3,4,1,6),
-                          (3,2,4,1,6),
-                          (4,3,2,1,6),
-                          (10,4,9,1,216),
-                          (10,10,10,1,729),
-                          (12,12,12,1,1331),
-                          (20,10,30,2,4032)])
+                          (3,3,3,1,1),
+                          (4,4,4,1,8),
+                          (5,5,5,1,27),
+                          (3,4,5,1,6),
+                          (4,3,5,1,6),
+                          (5,4,3,1,6),
+                          (11,5,10,1,216),
+                          (11,11,11,1,729),
+                          (13,13,13,1,1331),
+                          (21,11,31,2,3213)])
 def test_box_interior_volume(a, b, c, t, expected):
     """
     Do a single test for Exercise 3: box_interior_volume
@@ -249,6 +249,8 @@ def test_grayscale(r, g, b, expected):
     err_msg = helpers.check_result(actual, expected)
     if err_msg is not None:
         pytest.fail(err_msg + recreate_msg)
+
+
 
 @pytest.mark.parametrize("r, g, b, expected",
                          [(0,0,0,(0,0,0,1)),
