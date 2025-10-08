@@ -68,7 +68,7 @@ def box_interior_volume(length, width, depth, thickness):
     Output (number): the interior volume
 
     Examples:
-        >>> box_interior_volume(10,10,10,1)
+        >>> box_interior_volume(11,11,11,1)
         729       
 
     """
